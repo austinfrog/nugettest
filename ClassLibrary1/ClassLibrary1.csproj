@@ -1,0 +1,829 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Platforms>AnyCPU;x64</Platforms>
+    <Company>Some Compnay</Company>
+    <Product>Some product</Product>
+    <Copyright>Some copyright</Copyright>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Amazon.Extensions.Configuration.SystemsManager" Version="6.0.0" />
+    <PackageReference Include="Amazon.Lambda.APIGatewayEvents" Version="2.7.0" />
+    <PackageReference Include="Amazon.Lambda.Core" Version="2.2.0" />
+    <PackageReference Include="Amazon.Lambda.Serialization.Json" Version="2.1.1" />
+    <PackageReference Include="Amazon.Lambda.SQSEvents" Version="2.2.0" />
+    <PackageReference Include="AngleSharp" Version="1.0.7" />
+    <PackageReference Include="AngleSharp.Css" Version="0.17.0" />
+    <PackageReference Include="Antlr" Version="3.5.0.2" />
+    <PackageReference Include="Antlr3.Runtime" Version="3.5.1" />
+    <PackageReference Include="App.Metrics" Version="4.3.0" />
+    <PackageReference Include="App.Metrics.Abstractions" Version="4.3.0" />
+    <PackageReference Include="App.Metrics.AspNetCore.Abstractions" Version="4.3.0" />
+    <PackageReference Include="App.Metrics.AspNetCore.Core" Version="4.3.0" />
+    <PackageReference Include="App.Metrics.AspNetCore.Hosting" Version="4.3.0" />
+    <PackageReference Include="App.Metrics.Concurrency" Version="4.3.0" />
+    <PackageReference Include="App.Metrics.Core" Version="4.3.0" />
+    <PackageReference Include="App.Metrics.Extensions.Configuration" Version="4.3.0" />
+    <PackageReference Include="App.Metrics.Extensions.DependencyInjection" Version="4.3.0" />
+    <PackageReference Include="App.Metrics.Formatters.Ascii" Version="4.3.0" />
+    <PackageReference Include="App.Metrics.Formatters.Json" Version="4.3.0" />
+    <PackageReference Include="AspNetCore.HealthChecks.Redis" Version="8.0.0" />
+    <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="8.0.0" />
+    <PackageReference Include="AspNetCore.HealthChecks.Uris" Version="8.0.0" />
+    <PackageReference Include="Autofac" Version="7.1.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Autofac.WebApi2" Version="6.1.1" />
+    <PackageReference Include="AutoFixture" Version="4.18.1" />
+    <PackageReference Include="AutoFixture.AutoMoq" Version="4.18.1" />
+    <PackageReference Include="AutoFixture.Xunit2" Version="4.18.1" />
+    <PackageReference Include="Automatonymous" Version="5.1.3" />
+    <PackageReference Include="AWSSDK.CloudWatch" Version="3.7.301.6" />
+    <PackageReference Include="AWSSDK.CloudWatchLogs" Version="3.7.302.5" />
+    <PackageReference Include="AWSSDK.CognitoIdentityProvider" Version="3.7.301.1" />
+    <PackageReference Include="AWSSDK.Core" Version="3.7.300.22" />
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.300.22" />
+    <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.300" />
+    <PackageReference Include="AWSSDK.KeyManagementService" Version="3.7.300.22" />
+    <PackageReference Include="AWSSDK.Kinesis" Version="3.7.301.15" />
+    <PackageReference Include="AWSSDK.Lambda" Version="3.7.303.18" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.304.11" />
+    <PackageReference Include="AWSSDK.SecretsManager" Version="3.7.301.14" />
+    <PackageReference Include="AWSSDK.SecurityToken" Version="3.7.300.23" />
+    <PackageReference Include="AWSSDK.SimpleEmail" Version="3.7.300.22" />
+    <PackageReference Include="AWSSDK.SimpleNotificationService" Version="3.7.300.22" />
+    <PackageReference Include="AWSSDK.SimpleSystemsManagement" Version="3.7.301.18" />
+    <PackageReference Include="AWSSDK.SQS" Version="3.7.300.22" />
+    <PackageReference Include="Azure.Core" Version="1.36.0" />
+    <PackageReference Include="Azure.Core.Amqp" Version="1.3.0" />
+    <PackageReference Include="Azure.Data.AppConfiguration" Version="1.3.0" />
+    <PackageReference Include="Azure.Data.Tables" Version="12.8.2" />
+    <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.3.0" />
+    <PackageReference Include="Azure.Identity" Version="1.10.4" />
+    <PackageReference Include="Azure.Messaging.EventGrid" Version="4.21.0" />
+    <PackageReference Include="Azure.Messaging.EventHubs" Version="5.10.0" />
+    <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.17.1" />
+    <PackageReference Include="Azure.ResourceManager.AppService" Version="1.0.2" />
+    <PackageReference Include="Azure.ResourceManager.Cdn" Version="1.2.0" />
+    <PackageReference Include="Azure.ResourceManager.Compute" Version="1.2.1" />
+    <PackageReference Include="Azure.ResourceManager.ContainerRegistry" Version="1.2.0" />
+    <PackageReference Include="Azure.ResourceManager.CosmosDB" Version="1.3.0" />
+    <PackageReference Include="Azure.ResourceManager.Dns" Version="1.1.0" />
+    <PackageReference Include="Azure.ResourceManager.EventHubs" Version="1.0.0" />
+    <PackageReference Include="Azure.ResourceManager.KeyVault" Version="1.2.0" />
+    <PackageReference Include="Azure.ResourceManager.Monitor" Version="1.3.0" />
+    <PackageReference Include="Azure.ResourceManager.Network" Version="1.6.0" />
+    <PackageReference Include="Azure.ResourceManager.Redis" Version="1.2.1" />
+    <PackageReference Include="Azure.ResourceManager.ServiceBus" Version="1.0.0" />
+    <PackageReference Include="Azure.ResourceManager.Sql" Version="1.2.0" />
+    <PackageReference Include="Azure.ResourceManager.Storage" Version="1.2.0" />
+    <PackageReference Include="Azure.Search.Documents" Version="11.5.1" />
+    <PackageReference Include="Azure.Security.KeyVault.Certificates" Version="4.5.1" />
+    <PackageReference Include="Azure.Security.KeyVault.Keys" Version="4.5.0" />
+    <PackageReference Include="Azure.Security.KeyVault.Secrets" Version="4.5.0" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.19.1" />
+    <PackageReference Include="Azure.Storage.Common" Version="12.18.1" />
+    <PackageReference Include="Azure.Storage.Files.Shares" Version="12.17.1" />
+    <PackageReference Include="Azure.Storage.Queues" Version="12.17.1" />
+    <PackageReference Include="Ben.Demystifier" Version="0.4.1" />
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.11" />
+    <PackageReference Include="BenchmarkDotNet.Annotations" Version="0.13.11" />
+    <PackageReference Include="Blauhaus.Common.Abstractions" Version="2.4.0" />
+    <PackageReference Include="BoDi" Version="1.5.0" />
+    <PackageReference Include="Bogus" Version="35.0.1" />
+    <PackageReference Include="bootstrap" Version="5.3.2" />
+    <PackageReference Include="BouncyCastle" Version="1.8.9" />
+    <PackageReference Include="BouncyCastle.NetCore" Version="2.2.1" />
+    <PackageReference Include="Castle.Core" Version="5.1.1" />
+    <PackageReference Include="Castle.Core.AsyncInterceptor" Version="2.1.0" />
+    <PackageReference Include="Castle.LoggingFacility" Version="6.0.0" />
+    <PackageReference Include="Castle.Windsor" Version="6.0.0" />
+    <PackageReference Include="ClosedXML" Version="0.102.1" />
+    <PackageReference Include="CommandLineParser" Version="2.9.1" />
+    <PackageReference Include="Common.Logging" Version="3.4.1" />
+    <PackageReference Include="Common.Logging.Core" Version="3.4.1" />
+    <PackageReference Include="CommonServiceLocator" Version="2.0.7" />
+    <PackageReference Include="CompareNETObjects" Version="4.83.0" />
+    <PackageReference Include="Confluent.Kafka" Version="2.3.0" />
+    <PackageReference Include="Consul" Version="1.7.14.2" />
+    <PackageReference Include="coverlet.collector" Version="6.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.msbuild" Version="6.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="CsvHelper" Version="30.0.1" />
+    <PackageReference Include="Cucumber.Messages" Version="24.0.0" />
+    <PackageReference Include="Dapper" Version="2.1.24" />
+    <PackageReference Include="Dapper.Contrib" Version="2.0.78" />
+    <PackageReference Include="Datadog.Trace" Version="2.44.0" />
+    <PackageReference Include="dbup-core" Version="5.0.37" />
+    <PackageReference Include="DiffEngine" Version="14.0.0" />
+    <PackageReference Include="DnsClient" Version="1.7.0" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.0.0" />
+    <PackageReference Include="DogStatsD-CSharp-Client" Version="8.0.0" />
+    <PackageReference Include="DotLiquid" Version="2.2.692" />
+    <PackageReference Include="DotNetSeleniumExtras.WaitHelpers" Version="3.11.0" />
+    <PackageReference Include="DotNetZip" Version="1.16.0" />
+    <PackageReference Include="EasyNetQ" Version="7.8.0" />
+    <PackageReference Include="Elastic.Apm" Version="1.25.2" />
+    <PackageReference Include="Elasticsearch.Net" Version="7.17.5" />
+    <PackageReference Include="EmptyFiles" Version="5.0.0" />
+    <PackageReference Include="EnterpriseLibrary.Common" Version="6.0.1304" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="EO.WebBrowser" Version="23.4.5" />
+    <PackageReference Include="EPPlus" Version="7.0.4" />
+    <PackageReference Include="ExcelDataReader" Version="3.6.0" />
+    <PackageReference Include="ExcelDataReader.DataSet" Version="3.6.0" />
+    <PackageReference Include="ExcelNumberFormat" Version="1.1.0" />
+    <PackageReference Include="FakeItEasy" Version="8.0.0" />
+    <PackageReference Include="Fare" Version="2.2.1" />
+    <PackageReference Include="FastMember" Version="1.5.0" />
+    <PackageReference Include="FluentAssertions" Version="6.12.0" />
+    <PackageReference Include="FluentFTP" Version="48.0.3" />
+    <PackageReference Include="FluentMigrator" Version="5.0.0" />
+    <PackageReference Include="FluentValidation" Version="11.8.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.8.1" />
+    <PackageReference Include="Flurl" Version="4.0.0" />
+    <PackageReference Include="Flurl.Http" Version="4.0.0" />
+    <PackageReference Include="Fody" Version="6.8.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Fractions" Version="7.3.0" />
+    <PackageReference Include="FSharp.Core" Version="8.0.100" />
+    <PackageReference Include="Gherkin" Version="27.0.0" />
+    <PackageReference Include="Google.Api.CommonProtos" Version="2.13.0" />
+    <PackageReference Include="Google.Api.Gax" Version="4.4.0" />
+    <PackageReference Include="Google.Api.Gax.Grpc" Version="4.4.0" />
+    <PackageReference Include="Google.Api.Gax.Grpc.GrpcCore" Version="3.7.0" />
+    <PackageReference Include="Google.Api.Gax.Rest" Version="4.4.0" />
+    <PackageReference Include="Google.Apis" Version="1.64.0" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.64.0" />
+    <PackageReference Include="Google.Apis.Core" Version="1.64.0" />
+    <PackageReference Include="Google.Apis.Storage.v1" Version="1.64.0.3257" />
+    <PackageReference Include="Google.Cloud.Iam.V1" Version="3.0.0" />
+    <PackageReference Include="Google.Cloud.Storage.V1" Version="4.7.0" />
+    <PackageReference Include="Google.LongRunning" Version="3.0.0" />
+    <PackageReference Include="Google.Protobuf" Version="3.25.1" />
+    <PackageReference Include="GraphQL" Version="7.7.2" />
+    <PackageReference Include="GraphQL-Parser" Version="9.3.1" />
+    <PackageReference Include="GreenPipes" Version="4.0.1" />
+    <PackageReference Include="Grpc" Version="2.46.6" />
+    <PackageReference Include="Grpc.Auth" Version="2.59.0" />
+    <PackageReference Include="Grpc.Core" Version="2.46.6" />
+    <PackageReference Include="Grpc.Core.Api" Version="2.59.0" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.59.0" />
+    <PackageReference Include="Grpc.Net.ClientFactory" Version="2.59.0" />
+    <PackageReference Include="Grpc.Net.Common" Version="2.59.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.60.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Handlebars.Net" Version="2.1.4" />
+    <PackageReference Include="Hangfire" Version="1.8.6" />
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.8.6" />
+    <PackageReference Include="Hangfire.Core" Version="1.8.6" />
+    <PackageReference Include="Hangfire.SqlServer" Version="1.8.6" />
+    <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="2.8.2.3" />
+    <PackageReference Include="HotChocolate.Abstractions" Version="13.8.1" />
+    <PackageReference Include="HotChocolate.Language" Version="13.8.1" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.55" />
+    <PackageReference Include="HtmlSanitizer" Version="8.0.795" />
+    <PackageReference Include="Humanizer" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.af" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.ar" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.az" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.bg" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.bn-BD" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.cs" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.da" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.de" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.el" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.es" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.fa" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.fi-FI" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.fr" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.fr-BE" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.he" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.hr" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.hu" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.hy" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.id" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.it" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.ja" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.ko-KR" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.ku" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.lv" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.ms-MY" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.mt" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.nb" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.nb-NO" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.nl" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.pl" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.pt" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.ro" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.ru" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.sk" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.sl" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.sr" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.sr-Latn" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.sv" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.th-TH" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.tr" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.uk" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.uz-Cyrl-UZ" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.uz-Latn-UZ" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.vi" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.zh-CN" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.zh-Hans" Version="2.14.1" />
+    <PackageReference Include="Humanizer.Core.zh-Hant" Version="2.14.1" />
+    <PackageReference Include="IdentityModel" Version="6.2.0" />
+    <PackageReference Include="IdentityModel.OidcClient" Version="5.2.1" />
+    <PackageReference Include="IdentityServer4.Storage" Version="4.1.2" />
+    <PackageReference Include="Iesi.Collections" Version="4.0.5" />
+    <PackageReference Include="ImpromptuInterface" Version="8.0.4" />
+    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
+    <PackageReference Include="JetBrains.Annotations" Version="2023.3.0" />
+    <PackageReference Include="jose-jwt" Version="4.1.0" />
+    <PackageReference Include="jQuery" Version="3.7.1" />
+    <PackageReference Include="jQuery.UI.Combined" Version="1.13.2" />
+    <PackageReference Include="jQuery.Validation" Version="1.19.5" />
+    <PackageReference Include="JsonSubTypes" Version="2.0.1" />
+    <PackageReference Include="JunitXml.TestLogger" Version="3.0.134" />
+    <PackageReference Include="JWT" Version="10.1.1" />
+    <PackageReference Include="K4os.Compression.LZ4" Version="1.3.6" />
+    <PackageReference Include="K4os.Compression.LZ4.Streams" Version="1.3.6" />
+    <PackageReference Include="K4os.Hash.xxHash" Version="1.0.8" />
+    <PackageReference Include="knockoutjs" Version="3.5.1" />
+    <PackageReference Include="LaunchDarkly.EventSource" Version="5.1.0" />
+    <PackageReference Include="LazyCache" Version="2.4.0" />
+    <PackageReference Include="libphonenumber-csharp" Version="8.13.26" />
+    <PackageReference Include="librdkafka.redist" Version="2.3.0" />
+    <PackageReference Include="LinqKit" Version="1.2.5" />
+    <PackageReference Include="LinqKit.Core" Version="1.2.5" />
+    <PackageReference Include="log4net" Version="2.0.15" />
+    <PackageReference Include="Lucene.Net" Version="3.0.3" />
+    <PackageReference Include="MailKit" Version="4.3.0" />
+    <PackageReference Include="Markdig" Version="0.34.0" />
+    <PackageReference Include="MassTransit" Version="8.1.2" />
+    <PackageReference Include="MassTransit.Abstractions" Version="8.1.2" />
+    <PackageReference Include="MassTransit.AspNetCore" Version="7.3.1" />
+    <PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="7.3.1" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.1.2" />
+    <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
+    <PackageReference Include="MaxMind.GeoIP2" Version="5.1.0" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
+    <PackageReference Include="MediatR.Contracts" Version="2.0.1" />
+    <PackageReference Include="MessagePack" Version="2.5.140" />
+    <PackageReference Include="MessagePack.Annotations" Version="2.5.140" />
+    <PackageReference Include="MessagePackAnalyzer" Version="2.5.140">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter" Version="5.0.3" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="5.0.3" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="5.0.3" />
+    <PackageReference Include="Microsoft.ApplicationInsights" Version="2.22.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.EventCounterCollector" Version="2.22.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.TraceListener" Version="2.22.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.WorkerService" Version="2.22.0" />
+    <PackageReference Include="Microsoft.AspNet.Identity.EntityFramework" Version="2.2.4" />
+    <PackageReference Include="Microsoft.AspNet.Identity.Owin" Version="2.2.4" />
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.3.0" />
+    <PackageReference Include="Microsoft.AspNet.SignalR" Version="2.4.3" />
+    <PackageReference Include="Microsoft.AspNet.WebApi" Version="5.3.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Cors" Version="5.3.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Owin" Version="5.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Analyzers" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.HealthChecks" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.HostFiltering" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Connections.Client" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.HttpsPolicy" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Metadata" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.WebApiCompatShim" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.IIS" Version="2.2.6" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client.Core" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Azure.Amqp" Version="2.6.4" />
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.37.0" />
+    <PackageReference Include="Microsoft.Azure.Functions.Analyzers" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Azure.Management.Graph.RBAC.Fluent" Version="1.38.1" />
+    <PackageReference Include="Microsoft.Azure.Management.Msi.Fluent" Version="1.38.1" />
+    <PackageReference Include="Microsoft.Azure.Management.ResourceManager.Fluent" Version="1.38.1" />
+    <PackageReference Include="Microsoft.Azure.SignalR" Version="1.22.0" />
+    <PackageReference Include="Microsoft.Azure.SignalR.Protocols" Version="1.22.0" />
+    <PackageReference Include="Microsoft.Azure.WebJobs" Version="3.0.39" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Http" Version="3.2.0" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.ServiceBus" Version="5.13.5" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="5.2.2" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Host.Storage" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Script.ExtensionsMetadataGenerator" Version="4.0.1" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Bcl.HashCode" Version="1.1.1" />
+    <PackageReference Include="Microsoft.Build.Locator" Version="1.6.10" />
+    <PackageReference Include="Microsoft.Build.Tasks.Git" Version="8.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis" Version="4.8.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.AnalyzerUtilities" Version="3.3.4" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Features" Version="4.8.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="4.8.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Features" Version="4.8.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="3.3.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="8.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.Scripting.Common" Version="4.8.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.VersionCheckAnalyzer" Version="3.3.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.VisualBasic.Features" Version="4.8.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.VisualBasic.Workspaces" Version="4.8.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Workspaces.MSBuild" Version="4.8.0" />
+    <PackageReference Include="Microsoft.CodeQuality.Analyzers" Version="3.3.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Data.OData" Version="5.8.5" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
+    <PackageReference Include="Microsoft.Data.SqlClient.SNI" Version="5.1.1" />
+    <PackageReference Include="Microsoft.Data.SqlClient.SNI.runtime" Version="5.1.1" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Diagnostics.NETCore.Client" Version="0.2.452401" />
+    <PackageReference Include="Microsoft.Diagnostics.Runtime" Version="3.1.456101" />
+    <PackageReference Include="Microsoft.Diagnostics.Tracing.EventSource.Redist" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Diagnostics.Tracing.TraceEvent" Version="3.1.7" />
+    <PackageReference Include="Microsoft.DiaSymReader" Version="2.0.0" />
+    <PackageReference Include="Microsoft.DotNet.Scaffolding.Shared" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational.Design" Version="1.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Design" Version="1.1.6" />
+    <PackageReference Include="Microsoft.Extensions.ApiDescription.Server" Version="8.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Azure" Version="1.7.1" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.AzureAppConfiguration" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.KeyPerFile" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Features" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.ApplicationInsights" Version="2.22.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.EventLog" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.DataAnnotations" Version="8.0.0" />
+    <PackageReference Include="Microsoft.FeatureManagement" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Graph" Version="5.37.0" />
+    <PackageReference Include="Microsoft.Graph.Core" Version="3.1.3" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.58.1" />
+    <PackageReference Include="Microsoft.Identity.Client.Extensions.Msal" Version="4.58.1" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="2.16.0" />
+    <PackageReference Include="Microsoft.Identity.Web.Certificate" Version="2.16.0" />
+    <PackageReference Include="Microsoft.Identity.Web.Certificateless" Version="2.16.0" />
+    <PackageReference Include="Microsoft.Identity.Web.TokenCache" Version="2.16.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Abstractions" Version="7.0.3" />
+    <PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="5.3.0" />
+    <PackageReference Include="Microsoft.IdentityModel.LoggingExtensions" Version="7.0.3" />
+    <PackageReference Include="Microsoft.IdentityModel.Protocols.WsFederation" Version="7.0.3" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens.Saml" Version="7.0.3" />
+    <PackageReference Include="Microsoft.IdentityModel.Validators" Version="7.0.3" />
+    <PackageReference Include="Microsoft.IdentityModel.Xml" Version="7.0.3" />
+    <PackageReference Include="Microsoft.IO.RecyclableMemoryStream" Version="3.0.0" />
+    <PackageReference Include="Microsoft.jQuery.Unobtrusive.Ajax" Version="3.2.6" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.2.0" />
+    <PackageReference Include="Microsoft.NET.StringTools" Version="17.8.3" />
+    <PackageReference Include="Microsoft.NET.Workload.Emscripten.Manifest-6.0.100" Version="6.0.25" />
+    <PackageReference Include="Microsoft.NET.Workload.Emscripten.Manifest-6.0.200" Version="6.0.9" />
+    <PackageReference Include="Microsoft.NET.Workload.Emscripten.Manifest-6.0.300" Version="6.0.25" />
+    <PackageReference Include="Microsoft.NET.Workload.Emscripten.Manifest-6.0.400" Version="6.0.25" />
+    <PackageReference Include="Microsoft.NET.Workload.Emscripten.net6.Manifest-7.0.100" Version="7.0.14" />
+    <PackageReference Include="Microsoft.NET.Workload.Emscripten.net7.Manifest-7.0.100" Version="7.0.14" />
+    <PackageReference Include="Microsoft.NET.Workload.Mono.ToolChain.Manifest-6.0.100" Version="6.0.25" />
+    <PackageReference Include="Microsoft.NET.Workload.Mono.ToolChain.Manifest-6.0.200" Version="6.0.9" />
+    <PackageReference Include="Microsoft.NET.Workload.Mono.ToolChain.Manifest-6.0.300" Version="6.0.25" />
+    <PackageReference Include="Microsoft.NET.Workload.Mono.ToolChain.Manifest-6.0.400" Version="6.0.25" />
+    <PackageReference Include="Microsoft.NET.Workload.Mono.ToolChain.net6.Manifest-7.0.100" Version="7.0.14" />
+    <PackageReference Include="Microsoft.NET.Workload.Mono.ToolChain.net7.Manifest-7.0.100" Version="7.0.14" />
+    <PackageReference Include="Microsoft.NetCore.Analyzers" Version="3.3.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.Portable.Compatibility" Version="1.0.1" />
+    <PackageReference Include="Microsoft.NetFramework.Analyzers" Version="3.3.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net472" Version="1.0.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.OData.Core" Version="7.20.0" />
+    <PackageReference Include="Microsoft.OData.Edm" Version="7.20.0" />
+    <PackageReference Include="Microsoft.OpenApi" Version="1.6.11" />
+    <PackageReference Include="Microsoft.Owin.Cors" Version="4.2.2" />
+    <PackageReference Include="Microsoft.Owin.Security.OAuth" Version="4.2.2" />
+    <PackageReference Include="Microsoft.Owin.Security.OpenIdConnect" Version="4.2.2" />
+    <PackageReference Include="Microsoft.Rest.ClientRuntime.Azure.Authentication" Version="2.4.1" />
+    <PackageReference Include="Microsoft.ServiceFabric" Version="10.1.1541" />
+    <PackageReference Include="Microsoft.ServiceFabric.Data" Version="7.1.1541" />
+    <PackageReference Include="Microsoft.ServiceFabric.Services" Version="7.1.1541" />
+    <PackageReference Include="Microsoft.SourceLink.Common" Version="8.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.SqlServer.Server" Version="1.0.0" />
+    <PackageReference Include="Microsoft.SqlServer.Types" Version="160.1000.6" />
+    <PackageReference Include="Microsoft.TestPlatform" Version="17.8.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Debugger.Contracts" Version="17.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.SlowCheetah" Version="4.0.50">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Threading" Version="17.8.14" />
+    <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.8.14">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Validation" Version="17.8.8" />
+    <PackageReference Include="Microsoft.Win32.Registry.AccessControl" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Win32.SystemEvents" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="8.0.0" />
+    <PackageReference Include="MimeKit" Version="4.3.0" />
+    <PackageReference Include="MiniProfiler.Shared" Version="4.3.8" />
+    <PackageReference Include="Modernizr" Version="2.8.3" />
+    <PackageReference Include="Momentum.Pm.PortalApi" Version="5.20.0.596" />
+    <PackageReference Include="MongoDB.Bson" Version="2.23.1" />
+    <PackageReference Include="MongoDB.Driver" Version="2.23.1" />
+    <PackageReference Include="MongoDB.Driver.Core" Version="2.23.1" />
+    <PackageReference Include="MongoDB.Libmongocrypt" Version="1.8.0" />
+    <PackageReference Include="Mono.Cecil" Version="0.11.5" />
+    <PackageReference Include="Mono.TextTemplating" Version="2.3.1" />
+    <PackageReference Include="Moq" Version="4.20.70" />
+    <PackageReference Include="morelinq" Version="4.1.0" />
+    <PackageReference Include="MySql.Data" Version="8.2.0" />
+    <PackageReference Include="MySqlConnector" Version="2.3.3" />
+    <PackageReference Include="Namotion.Reflection" Version="3.1.1" />
+    <PackageReference Include="NCrontab" Version="3.3.3" />
+    <PackageReference Include="NCrontab.Signed" Version="3.3.3" />
+    <PackageReference Include="NEST" Version="7.17.5" />
+    <PackageReference Include="NetTopologySuite" Version="2.5.0" />
+    <PackageReference Include="NetTopologySuite.IO.SqlServerBytes" Version="2.1.0" />
+    <PackageReference Include="NewId" Version="4.0.1" />
+    <PackageReference Include="NewRelic.Agent.Api" Version="10.20.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Newtonsoft.Json.Bson" Version="1.0.2" />
+    <PackageReference Include="Newtonsoft.Json.Schema" Version="3.0.15" />
+    <PackageReference Include="NHibernate" Version="5.4.7" />
+    <PackageReference Include="Ninject" Version="3.3.6" />
+    <PackageReference Include="Ninject.Web.Common" Version="3.3.2" />
+    <PackageReference Include="Nito.AsyncEx" Version="5.1.2" />
+    <PackageReference Include="Nito.AsyncEx.Context" Version="5.1.2" />
+    <PackageReference Include="Nito.AsyncEx.Coordination" Version="5.1.2" />
+    <PackageReference Include="Nito.AsyncEx.Interop.WaitHandles" Version="5.1.2" />
+    <PackageReference Include="Nito.AsyncEx.Oop" Version="5.1.2" />
+    <PackageReference Include="Nito.AsyncEx.Tasks" Version="5.1.2" />
+    <PackageReference Include="Nito.Cancellation" Version="1.2.0" />
+    <PackageReference Include="Nito.Collections.Deque" Version="1.2.1" />
+    <PackageReference Include="Nito.Disposables" Version="2.5.0" />
+    <PackageReference Include="NJsonSchema" Version="10.9.0" />
+    <PackageReference Include="NJsonSchema.Yaml" Version="10.9.0" />
+    <PackageReference Include="NLog" Version="5.2.7" />
+    <PackageReference Include="NLog.Config" Version="4.7.15" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="5.3.7" />
+    <PackageReference Include="NLog.Schema" Version="5.2.7" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.7" />
+    <PackageReference Include="NodaTime" Version="3.1.9" />
+    <PackageReference Include="NodaTime.Serialization.JsonNet" Version="3.1.0" />
+    <PackageReference Include="Npgsql" Version="8.0.1" />
+    <PackageReference Include="NPOI" Version="2.6.2" />
+    <PackageReference Include="NServiceBus" Version="8.1.6" />
+    <PackageReference Include="NSubstitute" Version="5.1.0" />
+    <PackageReference Include="NSwag.Annotations" Version="13.20.0" />
+    <PackageReference Include="NSwag.AspNetCore" Version="13.20.0" />
+    <PackageReference Include="NSwag.Core" Version="13.20.0" />
+    <PackageReference Include="NSwag.Core.Yaml" Version="13.20.0" />
+    <PackageReference Include="NSwag.Generation" Version="13.20.0" />
+    <PackageReference Include="NSwag.Generation.AspNetCore" Version="13.20.0" />
+    <PackageReference Include="NSwag.MSBuild" Version="13.20.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="NuGet.Configuration" Version="6.8.0" />
+    <PackageReference Include="NuGet.DependencyResolver.Core" Version="6.8.0" />
+    <PackageReference Include="NuGet.LibraryModel" Version="6.8.0" />
+    <PackageReference Include="NuGet.Packaging" Version="6.8.0" />
+    <PackageReference Include="NuGet.ProjectModel" Version="6.8.0" />
+    <PackageReference Include="NuGet.Protocol" Version="6.8.0" />
+    <PackageReference Include="NuGet.Versioning" Version="6.8.0" />
+    <PackageReference Include="NUglify" Version="1.21.2" />
+    <PackageReference Include="NUnit" Version="4.0.1" />
+    <PackageReference Include="NUnit.Console" Version="3.16.3" />
+    <PackageReference Include="NUnit.ConsoleRunner" Version="3.16.3" />
+    <PackageReference Include="NUnit.Extension.NUnitProjectLoader" Version="3.7.1" />
+    <PackageReference Include="NUnit.Extension.NUnitV2Driver" Version="3.9.0" />
+    <PackageReference Include="NUnit.Extension.NUnitV2ResultWriter" Version="3.7.0" />
+    <PackageReference Include="NUnit.Extension.TeamCityEventListener" Version="1.0.9" />
+    <PackageReference Include="NUnit.Extension.VSProjectLoader" Version="3.9.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
+    <PackageReference Include="Octokit" Version="9.0.0" />
+    <PackageReference Include="OctoPack" Version="3.6.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="OpenTelemetry" Version="1.7.0" />
+    <PackageReference Include="OpenTelemetry.Api" Version="1.7.0" />
+    <PackageReference Include="OpenTelemetry.Api.ProviderBuilderExtensions" Version="1.7.0" />
+    <PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.7.0" />
+    <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.7.0" />
+    <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.7.0" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.7.0" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.7.0" />
+    <PackageReference Include="OpenTracing" Version="0.12.1" />
+    <PackageReference Include="Perfolizer" Version="0.3.5" />
+    <PackageReference Include="Pipelines.Sockets.Unofficial" Version="2.2.8" />
+    <PackageReference Include="Polly" Version="8.2.0" />
+    <PackageReference Include="Polly.Contrib.WaitAndRetry" Version="1.1.1" />
+    <PackageReference Include="Polly.Extensions.Http" Version="3.0.0" />
+    <PackageReference Include="Pomelo.JsonObject" Version="2.2.1" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
+    <PackageReference Include="Prism.Core" Version="8.1.97" />
+    <PackageReference Include="prometheus-net" Version="8.2.0" />
+    <PackageReference Include="protobuf-net" Version="3.2.30" />
+    <PackageReference Include="protobuf-net.Core" Version="3.2.30" />
+    <PackageReference Include="QRCoder" Version="1.4.3" />
+    <PackageReference Include="Quartz" Version="3.8.0" />
+    <PackageReference Include="QuestPDF" Version="2022.12.1" />
+    <PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
+    <PackageReference Include="RazorEngine" Version="3.10.0" />
+    <PackageReference Include="Rebus" Version="8.0.3" />
+    <PackageReference Include="RedLock.net" Version="2.3.2" />
+    <PackageReference Include="Refit" Version="7.0.0" />
+    <PackageReference Include="Refit.HttpClientFactory" Version="7.0.0" />
+    <PackageReference Include="Remotion.Linq" Version="2.2.0" />
+    <PackageReference Include="ReportGenerator" Version="5.2.0" />
+    <PackageReference Include="Respond" Version="1.4.2" />
+    <PackageReference Include="RestSharp" Version="110.2.0" />
+    <PackageReference Include="runtime.linux-arm.runtime.native.System.IO.Ports" Version="8.0.0" />
+    <PackageReference Include="runtime.linux-arm64.runtime.native.System.IO.Ports" Version="8.0.0" />
+    <PackageReference Include="runtime.linux-x64.runtime.native.System.IO.Ports" Version="8.0.0" />
+    <PackageReference Include="runtime.native.System.IO.Ports" Version="8.0.0" />
+    <PackageReference Include="runtime.osx-x64.runtime.native.System.IO.Ports" Version="8.0.0" />
+    <PackageReference Include="runtime.win-arm64.runtime.native.System.Data.SqlClient.sni" Version="4.4.0" />
+    <PackageReference Include="runtime.win-x64.runtime.native.System.Data.SqlClient.sni" Version="4.4.0" />
+    <PackageReference Include="runtime.win-x86.runtime.native.System.Data.SqlClient.sni" Version="4.4.0" />
+    <PackageReference Include="runtime.win.System.Console" Version="4.3.1" />
+    <PackageReference Include="runtime.win7-x64.runtime.native.System.IO.Compression" Version="4.3.2" />
+    <PackageReference Include="Scrutor" Version="4.2.2" />
+    <PackageReference Include="Selenium.Support" Version="4.16.2" />
+    <PackageReference Include="Selenium.WebDriver" Version="4.16.2" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="120.0.6099.10900" />
+    <PackageReference Include="SendGrid" Version="9.28.1" />
+    <PackageReference Include="Sentry" Version="3.41.3" />
+    <PackageReference Include="Sentry.AspNetCore" Version="3.41.3" />
+    <PackageReference Include="Sentry.Extensions.Logging" Version="3.41.3" />
+    <PackageReference Include="Serilog" Version="3.1.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.0" />
+    <PackageReference Include="Serilog.Enrichers.Environment" Version="2.3.0" />
+    <PackageReference Include="Serilog.Enrichers.Process" Version="2.0.2" />
+    <PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
+    <PackageReference Include="Serilog.Exceptions" Version="8.4.0" />
+    <PackageReference Include="Serilog.Expressions" Version="4.0.0" />
+    <PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="Serilog.Formatting.Compact" Version="2.0.0" />
+    <PackageReference Include="Serilog.Formatting.Elasticsearch" Version="9.0.3" />
+    <PackageReference Include="Serilog.Settings.AppSettings" Version="2.2.2" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="8.0.0" />
+    <PackageReference Include="Serilog.Sinks.ApplicationInsights" Version="4.0.0" />
+    <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="5.0.1" />
+    <PackageReference Include="Serilog.Sinks.Debug" Version="2.0.0" />
+    <PackageReference Include="Serilog.Sinks.Elasticsearch" Version="9.0.3" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="Serilog.Sinks.PeriodicBatching" Version="3.1.0" />
+    <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
+    <PackageReference Include="Serilog.Sinks.Seq" Version="6.0.0" />
+    <PackageReference Include="ServiceStack.Common" Version="8.0.0" />
+    <PackageReference Include="ServiceStack.Interfaces" Version="8.0.0" />
+    <PackageReference Include="ServiceStack.Text" Version="8.0.0" />
+    <PackageReference Include="SharpCompress" Version="0.35.0" />
+    <PackageReference Include="SharpZipLib" Version="1.4.2" />
+    <PackageReference Include="Shouldly" Version="4.2.1" />
+    <PackageReference Include="SimpleInjector" Version="5.4.3" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.1" />
+    <PackageReference Include="SkiaSharp.NativeAssets.macOS" Version="2.88.6" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Win32" Version="2.88.6" />
+    <PackageReference Include="Snappier" Version="1.1.3" />
+    <PackageReference Include="SonarAnalyzer.CSharp" Version="9.15.0.81779">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="SpecFlow" Version="3.9.74" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.74" />
+    <PackageReference Include="Splat" Version="14.8.12" />
+    <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="2.1.7" />
+    <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.7" />
+    <PackageReference Include="SQLitePCLRaw.core" Version="2.1.7" />
+    <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3" Version="2.1.7" />
+    <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3.linux" Version="1.1.14" />
+    <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3.osx" Version="1.1.14" />
+    <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3.v110_xp" Version="1.1.15" />
+    <PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.7" />
+    <PackageReference Include="SQLitePCLRaw.provider.e_sqlite3" Version="2.1.7" />
+    <PackageReference Include="SQLitePCLRaw.provider.e_sqlite3.netstandard11" Version="1.1.14" />
+    <PackageReference Include="SSH.NET" Version="2023.0.0" />
+    <PackageReference Include="SshNet.Security.Cryptography" Version="1.3.0" />
+    <PackageReference Include="StackExchange.Redis" Version="2.7.10" />
+    <PackageReference Include="StackExchange.Redis.StrongName" Version="1.2.6" />
+    <PackageReference Include="starkbank-ecdsa" Version="1.3.3" />
+    <PackageReference Include="Stripe.net" Version="43.7.0" />
+    <PackageReference Include="StructureMap" Version="4.7.1" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="StyleCop.Analyzers.Unstable" Version="1.2.0.507">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Superpower" Version="3.0.0" />
+    <PackageReference Include="Swashbuckle" Version="5.6.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="7.0.12" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters.Abstractions" Version="7.0.12" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.Core" Version="5.6.0" />
+    <PackageReference Include="Syncfusion.Licensing" Version="24.1.41" />
+    <PackageReference Include="System.CodeDom" Version="8.0.0" />
+    <PackageReference Include="System.ComponentModel.Composition" Version="8.0.0" />
+    <PackageReference Include="System.ComponentModel.Composition.Registration" Version="8.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.Data.Odbc" Version="8.0.0" />
+    <PackageReference Include="System.Data.OleDb" Version="8.0.0" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.118" />
+    <PackageReference Include="System.Diagnostics.EventLog" Version="8.0.0" />
+    <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="8.0.0" />
+    <PackageReference Include="System.DirectoryServices" Version="8.0.0" />
+    <PackageReference Include="System.DirectoryServices.AccountManagement" Version="8.0.0" />
+    <PackageReference Include="System.DirectoryServices.Protocols" Version="8.0.0" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+    <PackageReference Include="System.Formats.Asn1" Version="8.0.0" />
+    <PackageReference Include="System.Interactive.Async" Version="6.0.1" />
+    <PackageReference Include="System.IO.Abstractions" Version="20.0.4" />
+    <PackageReference Include="System.IO.Hashing" Version="8.0.0" />
+    <PackageReference Include="System.IO.Packaging" Version="8.0.0" />
+    <PackageReference Include="System.IO.Pipes.AccessControl" Version="5.0.0" />
+    <PackageReference Include="System.IO.Ports" Version="8.0.0" />
+    <PackageReference Include="System.Linq.Async" Version="6.0.1" />
+    <PackageReference Include="System.Management" Version="8.0.0" />
+    <PackageReference Include="System.Memory.Data" Version="8.0.0" />
+    <PackageReference Include="System.Net.Http.Json" Version="8.0.0" />
+    <PackageReference Include="System.Net.WebSockets.WebSocketProtocol" Version="5.0.0" />
+    <PackageReference Include="System.Reactive" Version="6.0.0" />
+    <PackageReference Include="System.Reactive.Core" Version="6.0.0" />
+    <PackageReference Include="System.Reactive.Interfaces" Version="6.0.0" />
+    <PackageReference Include="System.Reactive.Linq" Version="6.0.0" />
+    <PackageReference Include="System.Reactive.PlatformServices" Version="6.0.0" />
+    <PackageReference Include="System.Reflection.Context" Version="8.0.0" />
+    <PackageReference Include="System.Reflection.MetadataLoadContext" Version="8.0.0" />
+    <PackageReference Include="System.Resources.Extensions" Version="8.0.0" />
+    <PackageReference Include="System.Runtime.Caching" Version="8.0.0" />
+    <PackageReference Include="System.Runtime.InteropServices.WindowsRuntime" Version="4.3.0" />
+    <PackageReference Include="System.Security.Cryptography.Pkcs" Version="8.0.0" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.10.0" />
+    <PackageReference Include="SkiaSharp" Version="2.88.6" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="2.88.6" />
+    <PackageReference Include="Svg.Skia" Version="1.0.0.3" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.3.7" />
+    <PackageManagement Include="AngleSharp" Version="1.0.7" />
+    <PackageManagement Include="AWSSDK.S3" Version="3.7.104.11" />
+    <PackageManagement Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.7" />
+    <PackageManagement Include="AWSSDK.SecurityToken" Version="3.7.101.60" />
+    <PackageManagement Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.3.0" />
+    <PackageManagement Include="Azure.Extensions.AspNetCore.DataProtection.Blobs" Version="1.3.2" />
+    <PackageManagement Include="Azure.Identity" Version="1.10.4" />
+    <PackageManagement Include="Azure.Storage.Blobs" Version="12.19.1" />
+    <PackageManagement Include="BenchmarkDotNet" Version="0.13.11" />
+    <PackageManagement Include="Castle.Core" Version="5.1.1" />
+    <PackageManagement Include="DocumentFormat.OpenXml" Version="3.0.0" />
+    <PackageManagement Include="Fluid.Core" Version="2.5.0" />
+    <PackageManagement Include="GraphQL" Version="4.8.0" />
+    <PackageManagement Include="GraphQL.DataLoader" Version="4.8.0" />
+    <PackageManagement Include="GraphQL.MicrosoftDI" Version="4.8.0" />
+    <PackageManagement Include="GraphQL.SystemTextJson" Version="4.8.0" />
+    <PackageManagement Include="Jint" Version="3.0.0-beta-2057" />
+    <PackageManagement Include="HtmlSanitizer" Version="8.1.796-beta" />
+    <PackageManagement Include="Irony.Core" Version="1.0.7" />
+    <PackageManagement Include="libphonenumber-csharp" Version="8.13.26" />
+    <PackageManagement Include="Lorem.Universal.NET" Version="4.0.80" />
+    <PackageManagement Include="Lucene.Net" Version="4.8.0-beta00016" />
+    <PackageManagement Include="Lucene.Net.Analysis.Common" Version="4.8.0-beta00016" />
+    <PackageManagement Include="Lucene.Net.QueryParser" Version="4.8.0-beta00016" />
+    <PackageManagement Include="Lucene.Net.Spatial" Version="4.8.0-beta00016" />
+    <PackageManagement Include="MailKit" Version="4.3.0" />
+    <PackageManagement Include="Markdig" Version="0.34.0" />
+    <PackageManagement Include="MessagePack" Version="2.2.60" />
+    <PackageManagement Include="Microsoft.Identity.Web" Version="2.16.0" />
+    <PackageManagement Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageManagement Include="Microsoft.SourceLink.GitHub" Version="8.0.0" />
+    <PackageManagement Include="MimeKit" Version="4.3.0" />
+    <PackageManagement Include="MiniProfiler.AspNetCore.Mvc" Version="4.3.8" />
+    <PackageManagement Include="Moq" Version="4.20.70" />
+    <PackageManagement Include="ncrontab" Version="3.3.3" />
+    <PackageManagement Include="NEST" Version="7.17.5" />
+    <PackageManagement Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageManagement Include="NJsonSchema" Version="10.9.0" />
+    <PackageManagement Include="NLog.Web.AspNetCore" Version="5.3.7" />
+    <PackageManagement Include="NodaTime" Version="3.1.9" />
+    <PackageManagement Include="OpenIddict.AspNetCore" Version="5.0.0" />
+    <PackageManagement Include="OpenIddict.Core" Version="5.0.0" />
+    <PackageManagement Include="OrchardCore.Translations.All" Version="1.7.1" />
+    <PackageManagement Include="PdfPig" Version="0.1.8" />
+    <PackageManagement Include="Serilog.AspNetCore" Version="7.0.0" />
+    <PackageManagement Include="Shortcodes" Version="1.3.3" />
+    <PackageManagement Include="SixLabors.ImageSharp.Web" Version="3.1.0" />
+    <PackageManagement Include="StackExchange.Redis" Version="2.7.10" />
+    <PackageManagement Include="StyleCop.Analyzers" Version="1.1.118" />
+    <PackageManagement Include="System.Linq.Async" Version="6.0.1" />
+    <PackageManagement Include="xunit" Version="2.6.3" />
+    <PackageManagement Include="xunit.analyzers" Version="1.7.0" />
+    <PackageManagement Include="xunit.runner.visualstudio" Version="2.5.5" />
+    <PackageManagement Include="YesSql" Version="4.0.0-beta-0003" />
+    <PackageManagement Include="YesSql.Abstractions" Version="4.0.0-beta-0003" />
+    <PackageManagement Include="YesSql.Core" Version="4.0.0-beta-0003" />
+    <PackageManagement Include="YesSql.Filters.Abstractions" Version="4.0.0-beta-0003" />
+    <PackageManagement Include="YesSql.Filters.Query" Version="4.0.0-beta-0003" />
+    <PackageManagement Include="ZString" Version="2.5.1" />
+    <PackageManagement Include="Bogus.Locations" Version="35.0.1" />
+    <PackageManagement Include="Bogus.Text" Version="35.0.1" />
+    <PackageManagement Include="CountryData" Version="4.3.0" />
+    <PackageManagement Include="M5x.Bogus" Version="2.10.0" />
+    <PackageManagement Include="AutoBogusLifesupport" Version="2.14.0" />
+    <PackageManagement Include="NaughtyStrings" Version="2.4.1" />
+    <PackageManagement Include="BogusSQL" Version="1.0.0" />
+    <PackageReference Include="System.ServiceModel.Syndication" Version="8.0.0" />
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="8.0.0" />
+    <PackageReference Include="System.Text.Json" Version="8.0.0" />
+    <PackageReference Include="System.Threading.AccessControl" Version="8.0.0" />
+    <PackageReference Include="System.Threading.Channels" Version="8.0.0" />
+    <PackageReference Include="TencentCloudSDK.Common" Version="3.0.918" />
+    <PackageReference Include="TimeZoneConverter" Version="6.1.0" />
+    <PackageReference Include="Topshelf" Version="4.3.0" />
+    <PackageReference Include="Twilio" Version="6.15.2" />
+    <PackageReference Include="Unity" Version="5.11.10" />
+    <PackageReference Include="Unity.Abstractions" Version="5.11.7" />
+    <PackageReference Include="Unity.Container" Version="5.11.11" />
+    <PackageReference Include="Unity.Interception" Version="5.11.1" />
+    <PackageReference Include="Utf8Json" Version="1.3.7" />
+    <PackageReference Include="Validation" Version="2.5.51" />
+    <PackageReference Include="Volo.Abp.Core" Version="8.0.0" />
+    <PackageReference Include="Volo.Abp.Uow" Version="8.0.0" />
+    <PackageReference Include="WebActivatorEx" Version="2.2.0" />
+    <PackageReference Include="WebGrease" Version="1.6.0" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.8.1" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2622" />
+    <PackageReference Include="xunit" Version="2.6.3" />
+    <PackageReference Include="xunit.runner.console" Version="2.6.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Xunit.SkippableFact" Version="1.4.13" />
+    <PackageReference Include="YamlDotNet" Version="13.7.1" />
+    <PackageReference Include="Z.Expressions.Eval" Version="6.0.5" />
+    <PackageReference Include="ZstdSharp.Port" Version="0.7.4" />
+  </ItemGroup>
+</Project>
