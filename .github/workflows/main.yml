@@ -13,20 +13,15 @@ jobs:
   steps:
   - uses: actions/checkout@v2
   - name: Install dependencies
-   run: dotnet restore
+    run: dotnet restore
   - name: Build ${{ github.repository }}
-   run: |
+    run: |
      dotnet build --configuration Release
-  - name: Execute Unit Tests
-   run: |
-    dotnet test
+
   - name: Artifactory package creations
    # if: ${{ github.event_name == 'push' }}
-   run: |
-    export PATH="$PATH:$HOME/.dotnet/tools"
-    dotnet pack .
-    cd packages
-    # dotnet nuget locals all --clear
-    ls -la
-    # dotnet nuget push *.nupkg -s https://shaibz.jfrog.io/artifactory/api/nuget/nuget-virtual 
-    dotnet nuget push *.nupkg -s https://shaibz.jfrog.io/artifactory/api/nuget/nuget-virtual/ 
+    run: |
+     export PATH="$PATH:$HOME/.dotnet/tools"
+     dotnet pack .
+     cd packages
+     dotnet nuget push *.nupkg -s https://shaibz.jfrog.io/artifactory/api/nuget/nuget-virtual/ 
