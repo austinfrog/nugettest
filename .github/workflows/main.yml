@@ -1,0 +1,32 @@
+name: Build, Test and Package
+on:
+ # A pull request event will trigger this workflow for main branch
+ pull_request:
+  branches:
+   - main
+ push:
+  branches: [ main ]
+ workflow_dispatch:
+jobs:
+ build-test-package:
+  runs-on: internal-ubuntu
+  steps:
+  - uses: actions/checkout@v2
+  - name: Install dependencies
+   run: dotnet restore
+  - name: Build ${{ github.repository }}
+   run: |
+     dotnet build --configuration Release
+  - name: Execute Unit Tests
+   run: |
+    dotnet test
+  - name: Artifactory package creations
+   # if: ${{ github.event_name == 'push' }}
+   run: |
+    export PATH="$PATH:$HOME/.dotnet/tools"
+    dotnet pack .
+    cd packages
+    # dotnet nuget locals all --clear
+    ls -la
+    # dotnet nuget push *.nupkg -s https://shaibz.jfrog.io/artifactory/api/nuget/nuget-virtual 
+    dotnet nuget push *.nupkg -s https://shaibz.jfrog.io/artifactory/api/nuget/nuget-virtual/ 
